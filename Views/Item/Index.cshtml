@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1>Items</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button id="passBtn" type="button" value="pass" class="btn btn-success btn-lg float-start">PASS</button>
+        </div>
+        <div class="col">
+            <button id="failBtn" type="button" value="fail" class="btn btn-danger btn-lg float-end">FAIL</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <label for="Status">Pass QTY : </label>
+            <input id="passQty" type="text" value="" name="Status" disabled />
+        </div>
+        <div class="col">
+            <label for="Status">Total QTY : </label>
+            <input id="totalQty" type="text" value="" name="Status" disabled />
+        </div>
+        <div class="col">
+            <label for="Status">Fail QTY : </label>
+            <input id="failQty" type="text" value="" name="Status" disabled />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary btn-lg">SUBMIT</button>
+        </div>
+    </div>
+</div>
+<br />
+<div>
+    <h1>Failed Items</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Status</th>
+                <th>Fail Qty</th>
+                <th>Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            var passQty = 0;
+            var failQty = 0;
+            var totalQty = 0;
+
+            $("#passBtn").click(function () {
+                passQty++;
+                totalQty++;
+
+                $("#passQty").val(passQty);
+                $("#totalQty").val(totalQty);
+            });
+
+            $("#failBtn").click(function () {
+                failQty++;
+                totalQty++;
+
+                $("#failQty").val(failQty);
+                $("#totalQty").val(totalQty);
+            });
+        });
+    </script>
+}

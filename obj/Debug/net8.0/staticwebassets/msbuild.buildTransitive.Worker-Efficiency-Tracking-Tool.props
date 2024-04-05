@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Worker-Efficiency-Tracking-Tool.props" />
+</Project>
