@@ -81,6 +81,12 @@
 
                 $("#failQty").val(failQty);
                 $("#totalQty").val(totalQty);
+
+                Swal.fire({
+                    title : "Failed Reasons",
+                    text : "Wrong stiching pattern",
+                    icon : "error"
+                });
             });
         });
     </script>
